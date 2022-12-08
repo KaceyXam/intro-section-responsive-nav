@@ -1,0 +1,101 @@
+.dropbtn {
+	cursor: pointer;
+}
+
+.dropbtn:hover {
+	color: var(--almost-black);
+}
+
+.dropbtn::after {
+	content: url("/images/icon-arrow-down.svg");
+	padding: 0.5em;
+	scale: 1.5;
+	display: inline-block;
+	transition: rotate 75ms ease-in-out;
+}
+
+.dropbtn.active::after {
+	rotate: 180deg;
+}
+
+.maincontent {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	max-width: 1200px;
+	gap: 6rem;
+	margin-inline: auto;
+	padding-inline: 2.5%;
+	margin-top: 2rem;
+	align-items: center;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 3rem;
+	margin-top: 4rem;
+}
+
+.content h1 {
+	font-size: 4.1rem;
+}
+
+.content p {
+	color: var(--med-gray);
+	max-width: 445px;
+	line-height: 1.5;
+}
+
+.learnbtn {
+	padding: 1em 1.75em;
+	background-color: var(--almost-black);
+	color: white;
+	border-radius: 1em;
+	border: solid 2px var(--almost-black);
+	transition: 100ms ease-in-out;
+	cursor: pointer;
+}
+
+.learnbtn:hover {
+	background-color: var(--almost-white);
+	color: var(--almost-black);
+}
+
+.clienticonlist {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	margin-top: auto;
+}
+
+.clienticon {
+	height: auto;
+}
+
+@media (max-width: 900px) {
+	.dropbtn::after {
+		padding: 0;
+		padding-inline: 0.5em;
+	}
+
+	.maincontent {
+		display: flex;
+		flex-direction: column-reverse;
+		gap: 0;
+		padding: 0;
+		margin: 0;
+	}
+
+	.content {
+		align-items: center;
+		text-align: center;
+		gap: 1.5rem;
+	}
+
+	.content h1 {
+		font-size: 2.5rem;
+	}
+}
